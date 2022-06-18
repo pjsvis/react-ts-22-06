@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "wesbos/typescript"
+  ],
+  "plugins": [
+    "only-warn"
+  ],
+  "rules": {
+    "no-console": 0,
+    "no-empty-pattern": 0,
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "no-use-before-define": "off",
+    "@typescript/no-use-before-define": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "arrow-body-style": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": [
+      "off"
+    ],
+    "@typescript-eslint/ban-types": 0,
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ]
+  }
+}
