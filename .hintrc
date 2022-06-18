@@ -1,0 +1,8 @@
+{
+  "hints": {
+      "no-inline-styles": [ "ignore", {
+          "requireNoStyleElement": true
+      }]
+    
+  }
+}
