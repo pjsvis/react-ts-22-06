@@ -17,9 +17,9 @@ const getValidityAsync = async (answer: string) => {
 
 export interface AnswerApi {
   question: string;
-  setValidityAsync(answer: string): boolean;
+  getValidityAsync(answer: string): boolean;
 }
 export const answerApi = {
   question: "What is the answer to life, the universe, and everything?",
-  setValidityAsync: getValidityAsync
+  getValidityAsync: getValidityAsync
 };

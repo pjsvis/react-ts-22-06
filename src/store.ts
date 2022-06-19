@@ -1,6 +1,6 @@
 import to from "await-to-js";
 import { proxy, useSnapshot } from "valtio";
-import { answerApi } from "./deep-thought";
+import { answerApi } from "./answer-api";
 
 export interface Store {
   question: string;
@@ -23,7 +23,7 @@ interface StoreApi {
 
 const setAnswer = async (answer: string) => {
   store.answer = answer;
-  const [err, res] = await to(answerApi.setValidityAsync(answer));
+  const [err, res] = await to(answerApi.getValidityAsync(answer));
   if (err || res === undefined) {
     store.validity = false;
     store.conclusion = `Deep Thought could not return an answer`;
