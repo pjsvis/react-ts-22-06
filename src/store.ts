@@ -33,7 +33,9 @@ const setAnswer = async (answer: string) => {
   store.validity = res;
   if (answer.length === 0) {
     store.conclusion = "";
+    return;
   }
+
   store.conclusion = res
     ? `
   The answer to life, the universe, and everything is ${answer}`
