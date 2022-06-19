@@ -29,7 +29,11 @@ const setAnswer = async (answer: string) => {
     store.conclusion = `Deep Thought could not return an answer`;
     return;
   }
+
   store.validity = res;
+  if (answer.length === 0) {
+    store.conclusion = "";
+  }
   store.conclusion = res
     ? `
   The answer to life, the universe, and everything is ${answer}`
