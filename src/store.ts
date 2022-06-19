@@ -26,11 +26,11 @@ const setAnswer = async (answer: string) => {
   const [err, res] = await to(answerApi.setValidityAsync(answer));
   if (err || !res) {
     store.validity = false;
-    store.conclusion = `${answer} is the wrong answer`;
+    store.conclusion = `The answer is not "${answer}"`;
     return;
   }
   store.conclusion = `
-  ${answer} is the correct answer`;
+  The answer to life, the universe, and everything is ${answer}`;
   store.validity = res;
 };
 
