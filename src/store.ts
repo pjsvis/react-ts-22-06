@@ -24,14 +24,16 @@ interface StoreApi {
 const setAnswer = async (answer: string) => {
   store.answer = answer.length > 0 ? answer : "";
   const [err, res] = await to(answerApi.setValidityAsync(answer));
-  if (err || !res) {
+  if (err || res === undefined) {
     store.validity = false;
-    store.conclusion = `The answer is not "${answer}"`;
+    store.conclusion = `Deep Thought could not return an answer`;
     return;
   }
-  store.conclusion = `
-  The answer to life, the universe, and everything is ${answer}`;
   store.validity = res;
+  store.conclusion = res
+    ? `
+  The answer to life, the universe, and everything is ${answer}`
+    : `The answer is not "${answer} `;
 };
 
 export const storeApi: StoreApi = {
