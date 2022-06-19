@@ -15,3 +15,4 @@ Created with CodeSandbox
 - [swagger editor](https://editor.swagger.io/#/) 
 - [NJsonSchema](https://github.com/RicoSuter/NJsonSchema)
 - [NSwag](https://github.com/RicoSuter/NSwag)
+- [AutoRest](https://github.com/Azure/autorest.typescript)
