@@ -1,12 +1,12 @@
 import React from "react";
-import { storeStateApi, useStoreState } from "./store";
+import { storeApi, useStoreState } from "./store";
 import "./styles.css";
 
 export default function App() {
   const [storeState] = useStoreState();
   const handleAnswer = (e: React.ChangeEvent<HTMLInputElement>) => {
     const answer = e.currentTarget.value;
-    storeStateApi.setAnswer(answer);
+    storeApi.setAnswer(answer);
   };
   const divStyle = { marginBottom: "1em" };
 

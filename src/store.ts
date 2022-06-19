@@ -15,7 +15,7 @@ const storeDefaults: Store = {
 };
 const store = proxy(storeDefaults);
 
-interface StoreStateApi {
+interface StoreApi {
   setAnswer: (answer: string) => void;
 }
 const setAnswer = async (answer: string) => {
@@ -28,7 +28,7 @@ const setAnswer = async (answer: string) => {
   store.validity = res;
 };
 
-export const storeStateApi: StoreStateApi = {
+export const storeApi: StoreApi = {
   setAnswer: (answer) => setAnswer(answer)
 };
 
