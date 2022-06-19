@@ -4,17 +4,12 @@ const delay = (time: number) => {
   return new Promise((resolve) => setTimeout(resolve, time));
 };
 
-const strAnswers: string[] = ["42", "fortytwo"];
-
-const getValidityAsync = async (answer: unknown) => {
+const getValidityAsync = async (answer: string) => {
   await delay(500);
-  if (typeof answer === "string" && removeSpaces(answer) === "42") {
+  if (removeSpaces(answer) === "42") {
     return true;
   }
-  if (
-    typeof answer === "string" &&
-    strAnswers.includes(removeSpaces(answer).toLowerCase())
-  ) {
+  if (removeSpaces(answer).toLowerCase() === "fortytwo") {
     return true;
   }
   return false;
@@ -22,5 +17,9 @@ const getValidityAsync = async (answer: unknown) => {
 
 export interface AnswerApi {
   question: string;
-  getValidityAsync(answer: unknown): void;
+  setValidityAsync(answer: string): boolean;
 }
+export const answerApi = {
+  question: "What is the answer to life, the universe, and everything?",
+  setValidityAsync: getValidityAsync
+};

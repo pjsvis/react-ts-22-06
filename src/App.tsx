@@ -22,7 +22,7 @@ export default function App() {
         {storeState.validity && (
           <span>{storeState.answer} is the correct answer!</span>
         )}
-        {!storeState.validity && (
+        {!storeState.validity && storeState.answer.length > 0 && (
           <span>{storeState.answer} is the wrong answer!</span>
         )}
       </div>
