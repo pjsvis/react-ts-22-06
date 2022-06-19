@@ -22,7 +22,7 @@ interface StoreApi {
 }
 
 const setAnswer = async (answer: string) => {
-  store.answer = answer.length > 0 ? answer : "";
+  store.answer = answer;
   const [err, res] = await to(answerApi.setValidityAsync(answer));
   if (err || res === undefined) {
     store.validity = false;
