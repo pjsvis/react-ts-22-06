@@ -13,8 +13,7 @@ export default function App() {
   const { question, conclusion } = storeState;
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Deep Thought</h1>
       <div style={divStyle}> {question}</div>
       <div style={divStyle}>
         <input type="text" onChange={handleAnswer} />
