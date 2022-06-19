@@ -11,6 +11,7 @@ Created with CodeSandbox
 
 ## type generation
 
+- [dtsGen](https://www.npmjs.com/package/dtsgenerator)
 - [swagger editor](https://editor.swagger.io/#/) 
 - [NJsonSchema](https://github.com/RicoSuter/NJsonSchema)
 - [NSwag](https://github.com/RicoSuter/NSwag)
