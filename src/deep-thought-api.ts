@@ -15,11 +15,11 @@ const getValidityAsync = async (answer: string) => {
   return false;
 };
 
-export interface AnswerApi {
+export interface DeepThoughtApi {
   question: string;
   getValidityAsync(answer: string): boolean;
 }
-export const answerApi = {
+export const deepThoughtApi = {
   question: "What is the answer to life, the universe, and everything?",
   getValidityAsync: getValidityAsync
 };
