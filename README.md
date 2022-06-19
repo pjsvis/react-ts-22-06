@@ -6,3 +6,4 @@ Created with CodeSandbox
 - [table choice guide](https://flatlogic.com/blog/react-table-guide-and-best-react-table-examples/)
 - [zod](https://github.com/colinhacks/zod)
 - [typanion](https://mael.dev/typanion/)
+- [swagger editor](https://editor.swagger.io/#/) to generate typescript types
